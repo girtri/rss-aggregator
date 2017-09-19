@@ -12,11 +12,17 @@
 		"@types/node": "^8.0.28",
 		"@types/react": "^16.0.5",
 		"@types/react-dom": "^15.5.4",
+		"@types/react-mdl": "^1.7.22",
+		"css-loader": "^0.28.7",
 		"electron": "^1.7.6",
 		"electron-debug": "^1.4.0",
 		"electron-devtools-installer": "^2.2.0",
+		"style-loader": "^0.18.2",
 		"ts-loader": "^2.3.7",
 		"typescript": "^2.5.2",
 		"webpack": "^3.6.0"
+	},
+	"dependencies": {
+		"react-mdl": "^1.10.3"
 	}
 }
