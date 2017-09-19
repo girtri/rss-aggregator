@@ -12,9 +12,10 @@ module.exports = {
 	resolve: {
 		modules: [
 			"node_modules",
-			path.resolve(__dirname, "app/ts")
+			path.resolve(__dirname, "app/ts"),
+			path.resolve(__dirname, "app/sass")
 		],
-		extensions: [ ".ts", ".tsx", ".js", "css"]
+		extensions: [ ".ts", ".tsx", ".js", ".scss", "css"]
 	},
 
 	devtool: "source-map", // enum
@@ -40,6 +41,14 @@ module.exports = {
 						mimetype: "application/font-woff"
 					}
 				}
+			},
+			{
+				test: /\.scss$/,
+				use: [
+					"style-loader",
+					"css-loader",
+					"sass-loader"
+				]
 			}
 		]
 	}

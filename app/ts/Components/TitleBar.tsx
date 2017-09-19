@@ -11,7 +11,7 @@ export default class TitleBar extends React.Component<{}, {}>
 	
 	render() {
 		return (
-			<Header scroll>
+			<Header title="RSS Aggregator" scroll>
 				<Navigation>
 					<a href="#" onClick={this.onClose}><Icon name="close" /></a>
 				</Navigation>
