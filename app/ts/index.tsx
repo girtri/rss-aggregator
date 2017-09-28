@@ -10,6 +10,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import thunkMiddleware from "redux-thunk";
 import * as promiseMiddleware from "redux-promise";
 import appReducers from "./Reducers";
+import Router from "./Services/Router";
 
 const storeEnhancer = compose(
 	applyMiddleware(
@@ -22,9 +23,13 @@ const store = createStore(
 	appReducers, storeEnhancer
 );
 
+//const router = new Router(store);
+
 ReactDOM.render(
 	<Provider store={store}>
 		<App {...this.props} />
 	</Provider>,
 	document.getElementById("root")
 );
+
+//router.register();

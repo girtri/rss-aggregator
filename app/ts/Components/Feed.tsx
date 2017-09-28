@@ -49,8 +49,8 @@ export default class Feed extends React.Component<IProps, {}>
 			<div className="page-content feed-index" ref={(el: HTMLElement) => { this.indexEl = el; }}>
 				<div className="feed-list">
 					{items.map((item: IRssItem, inx: number) => (
-					<Card shadow={0} style={{width: "100%", height: "auto", margin: "auto"}}>
-						<CardTitle expand style={{color: "#fff", backgroundColor: "#46B6AC"}}>Title</CardTitle>
+					<Card key={inx} shadow={0} style={{width: "100%", height: "auto", margin: "auto"}}>
+						<CardTitle expand style={{color: "#fff", backgroundColor: "#46B6AC"}}>{item.title}</CardTitle>
 						<CardText>
 							{item.description ? Feed.stripHtml(item.description) : ""}
 						</CardText>
