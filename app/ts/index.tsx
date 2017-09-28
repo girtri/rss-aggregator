@@ -5,7 +5,26 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import App from "./Containers/App";
 
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware, compose } from "redux";
+import thunkMiddleware from "redux-thunk";
+import * as promiseMiddleware from "redux-promise";
+import appReducers from "./Reducers";
+
+const storeEnhancer = compose(
+	applyMiddleware(
+		thunkMiddleware,
+		promiseMiddleware
+	)
+);
+
+const store = createStore(
+	appReducers, storeEnhancer
+);
+
 ReactDOM.render(
-	<App />,
+	<Provider store={store}>
+		<App {...this.props} />
+	</Provider>,
 	document.getElementById("root")
 );

@@ -13,6 +13,8 @@
 		"@types/react": "^16.0.5",
 		"@types/react-dom": "^15.5.4",
 		"@types/react-mdl": "^1.7.22",
+		"@types/react-redux": "^5.0.9",
+		"@types/sha1": "^1.1.0",
 		"css-loader": "^0.28.7",
 		"electron": "^1.7.6",
 		"electron-debug": "^1.4.0",
@@ -25,8 +27,14 @@
 		"webpack": "^3.6.0"
 	},
 	"dependencies": {
+		"feedme": "^1.0.1",
 		"react": "^15.4.2",
 		"react-dom": "^15.4.2",
-		"react-mdl": "^1.10.3"
+		"react-mdl": "^1.10.3",
+		"react-redux": "^5.0.6",
+		"redux-actions": "^2.2.1",
+		"redux-promise": "^0.5.3",
+		"redux-thunk": "^2.2.0",
+		"sha1": "^1.1.1"
 	}
 }
